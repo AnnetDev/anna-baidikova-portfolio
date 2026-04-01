@@ -3,7 +3,8 @@ import { categories } from '@/data/skills';
 
 export default function Skills() {
   return (
-    <section className="skills container" id="skills">
+    <section className="skills" id="skills">
+      <div className="container">
       <h2>Tech Stack &amp; Skills</h2>
       <dl className="skills__categories">
         {categories.map((category, ci) => (
@@ -19,6 +20,7 @@ export default function Skills() {
           </AnimateIn>
         ))}
       </dl>
+      </div>
     </section>
   );
 }

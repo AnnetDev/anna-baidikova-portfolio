@@ -5,11 +5,9 @@ import Link from 'next/link';
 import { Sun, Moon } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { useTheme } from '@/context/ThemeContext';
-import AnimateIn from './AnimateIn';
 
 const navLinks = [
   { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
   { href: '#contacts', label: 'Contacts' },
 ];
@@ -52,8 +50,8 @@ export default function Header() {
   };
 
   return (
-    <AnimateIn type="fade-down" delay={0.1} duration={1.2}>
-      <header className="header container">
+    <header className="header ">
+      <div className="container header-content-wrap">
         <Link className="header__link" href="/">
           <Image src="/images/icons/ABlogo.svg" alt="Welcome to Anna's website" width={48} height={48} />
           <p>AnnetDev</p>
@@ -86,7 +84,7 @@ export default function Header() {
             </li>
           </menu>
         </nav>
+        </div>
       </header>
-    </AnimateIn>
   );
 }

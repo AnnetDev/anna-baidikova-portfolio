@@ -2,8 +2,8 @@ import { Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="footer container">
-      <div className="footer__main-content">
+    <footer className="footer ">
+      <div className="footer__main-content container">
         <a className="footer__gh-link gh-link" href="https://github.com/AnnetDev" target="_blank" rel="noopener noreferrer" aria-label="Go to Anna's GitHub">AnnetDev</a>
         <nav className="footer__nav">
           <menu className="footer__menu">

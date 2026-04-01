@@ -41,6 +41,20 @@
     text-decoration: none;
     color: #ffffff;
     font-size: 1rem;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1.5px;
+        background: linear-gradient(to right, #c8699e, #7046aa, #1ac7fe);
+        transition: width 0.3s ease;
+    }
 }
 
 .footer__social-list {
@@ -74,13 +88,18 @@
 
 .footer__menu-item:hover a,
 .footer__menu-item:focus a,
-.footer__menu-item:focus-within a,
+.footer__menu-item:focus-within a {
+    &::after {
+        width: 100%;
+    }
+}
+
 .footer__gh-link:hover,
 .footer__gh-link:focus,
 .footer__gh-link:focus-within {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
-        0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(0, 212, 255, 0.3),
-        0 0 40px rgba(147, 51, 234, 0.2);
+    &::after {
+        width: 100%;
+    }
 }
 
 .footer__list-link {
@@ -99,7 +118,20 @@
         text-decoration: none;
         font-weight: 600;
         color: white;
-        transition: all ease 0.3s;
+        transition: color 0.3s ease;
+        position: relative;
+        padding-bottom: 2px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: linear-gradient(to right, #c8699e, #7046aa, #1ac7fe);
+            transition: width 0.3s ease;
+        }
     }
 }
 
@@ -149,13 +181,10 @@ html.light-mode .footer {
         }
     }
 
-    .footer__menu-item:hover a,
-    .footer__menu-item:focus a,
-    .footer__menu-item:focus-within a,
-    .footer__gh-link:hover,
-    .footer__gh-link:focus,
-    .footer__gh-link:focus-within {
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4),
-            0 3px 4px rgba(0, 0, 0, 0.3);
+    .footer__menu a,
+    .footer__gh-link {
+        &::after {
+            background: linear-gradient(to right, #c8699e, #7046aa);
+        }
     }
 }
