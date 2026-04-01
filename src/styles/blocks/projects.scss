@@ -1,6 +1,10 @@
 .projects {
     padding-top: 40px;
     padding-bottom: 60px;
+    background-color: #000000;
+    background-image: url("/images/stars.svg");
+    background-attachment: fixed;
+    inset: 0;
 
     @media (min-width: 1200px) {
         padding-top: 60px;
@@ -122,6 +126,7 @@
     font-size: 1.1rem;
     font-weight: 700;
     color: #ffffff;
+    letter-spacing: 0.05em;
 }
 
 .projects__card-desc {
@@ -192,6 +197,14 @@
 
 // Light mode
 html.light-mode {
+    .projects {
+        background-color: #f0ede8;
+        background-image: url("/images/dots-light.svg");
+            background-color: rgba(245, 242, 238, 0.9);
+    background-image: none;
+
+    }
+
     .projects__card {
         border-color: rgba(0, 0, 0, 0.1);
         background-color: rgba(0, 0, 0, 0.02);
