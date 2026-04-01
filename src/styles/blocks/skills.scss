@@ -75,9 +75,8 @@
 }
 
 html.light-mode .skills {
-    background-color: #f8f5f0;
-    background-image: url("/images/bg-light-1.svg");
-    background-size: cover;
+    background-color: rgba(245, 242, 238, 0.9);
+    background-image: none;
 
     .skills__tag {
         color: #ffffff;

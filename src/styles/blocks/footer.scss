@@ -88,10 +88,7 @@
     width: 30px;
     height: auto;
     cursor: pointer;
-
-    svg {
-        fill: #ffffff;
-    }
+    color: #ffffff;
 }
 
 .footer__gh-link {
@@ -136,8 +133,8 @@ html.light-mode .footer {
         font-weight: 600;
     }
 
-    .footer__list-link svg {
-        fill: #000000;
+    .footer__list-link {
+        color: #000000;
     }
 
     .footer__gh-link {
