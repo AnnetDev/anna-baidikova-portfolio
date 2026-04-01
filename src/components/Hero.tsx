@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import AnimateIn from './AnimateIn';
 import { categories } from '@/data/skills';
 

@@ -16,7 +16,7 @@ export default function Contacts() {
                 href={link.href}
                 {...(link.target && { target: link.target, rel: 'noopener noreferrer' })}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" dangerouslySetInnerHTML={{ __html: link.svgContent }} />
+                <link.Icon width={18} height={18} />
                 <p>{link.label}</p>
               </a>
             </li>
