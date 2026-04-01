@@ -1,42 +1,63 @@
 import Image from 'next/image';
 import AnimateIn from './AnimateIn';
+import { projects, type Project } from '@/data/projects';
 
-const projects = [
-  { href: 'https://annetdev.github.io/Internship/', name: 'Internship', img: 'internship' },
-  { href: 'https://annetdev.github.io/my-timeline-project/', name: 'TimeLine component', img: 'timeline' },
-  { href: 'https://wtqm9n.csb.app/', name: 'Farm Food Market', img: 'farmfood' },
-  { href: 'https://annetdev.github.io/LIFETOUR/', name: 'Lifetour', img: 'lifetour' },
-  { href: 'https://osnovavrn.ru/', name: 'Osnova', img: 'osnova' },
-  { href: 'https://annetdev.github.io/SuperGym/', name: 'SuperGym', img: 'supergym' },
-  { href: 'https://annetdev.github.io/Drink2go-grading/', name: 'Drink2Go', img: 'drink2go' },
-  { href: 'https://annetdev.github.io/2448369-kekstagram-32/', name: 'Kekstagram', img: 'kekstagram' },
-  { href: 'https://annetdev.github.io/2448369-cat-energy-31/', name: 'CatEnergy', img: 'catenergy' },
-];
+function ProjectCard({ project, index }: { project: Project; index: number }) {
+  return (
+    <AnimateIn type="fade-right" delay={index * 0.05} as="li" className="projects__card-wrapper">
+      <li className={`projects__card${project.featured ? ' projects__card--featured' : ''}`}>
+        {project.featured && <span className="projects__badge">Featured</span>}
+
+        <div className="projects__card-image">
+          {project.img ? (
+            <Image
+              src={`/images/projects/${project.img}-mobile@1x.jpg`}
+              alt={`${project.name} project`}
+              width={400}
+              height={240}
+              sizes="(min-width: 1200px) 400px, (min-width: 768px) 340px, 100vw"
+              className="projects__img"
+            />
+          ) : (
+            <div className="projects__placeholder">
+              <span>{project.name.charAt(0)}</span>
+            </div>
+          )}
+        </div>
+
+        <div className="projects__card-body">
+          <h3 className="projects__card-title">{project.name}</h3>
+          <p className="projects__card-desc">{project.description}</p>
+
+          <ul className="projects__tech">
+            {project.tech.map((t) => (
+              <li key={t} className="projects__tech-tag">{t}</li>
+            ))}
+          </ul>
+
+          <div className="projects__links">
+            <a href={project.live} target="_blank" rel="noopener noreferrer" className="projects__link projects__link--live">
+              Live
+            </a>
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className="projects__link projects__link--github">
+                GitHub
+              </a>
+            )}
+          </div>
+        </div>
+      </li>
+    </AnimateIn>
+  );
+}
 
 export default function Projects() {
   return (
     <section className="projects container" id="projects">
-      <h2 className="projects__heading">My projects</h2>
+      <h2 className="projects__heading">Projects</h2>
       <ul className="projects__list">
         {projects.map((project, i) => (
-          <AnimateIn key={project.img} type="fade-right" delay={i * 0.05} as="li">
-            <li>
-              <a href={project.href} target="_blank" rel="noopener noreferrer">
-                <span className="visually-hidden">View project</span>
-                <div>
-                  <Image
-                    className="projects__preview"
-                    src={`/images/projects/${project.img}-mobile@1x.jpg`}
-                    alt={`${project.name} project`}
-                    width={220}
-                    height={327}
-                    sizes="(min-width: 1200px) 240px, (min-width: 768px) 220px, 200px"
-                  />
-                </div>
-                <h3>{project.name}</h3>
-              </a>
-            </li>
-          </AnimateIn>
+          <ProjectCard key={project.name} project={project} index={i} />
         ))}
       </ul>
     </section>
