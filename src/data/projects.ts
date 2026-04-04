@@ -37,13 +37,15 @@ export const projects: Project[] = [
     tech: ['React', 'TypeScript', 'GSAP', 'Swiper', 'Webpack', 'Styled Components'],
     live: 'https://annetdev.github.io/my-timeline-project/',
     github: 'https://github.com/AnnetDev/my-timeline-project',
-    img: 'timeline',
+    logoFont: 'var(--font-pt-sans)',
   },
   {
     name: 'CatCafé',
     description: 'Landing page for a cat café in Saint Petersburg. Photo gallery with Swiper slider, ticket configurator with live price calculation, and a fully responsive layout.',
     tech: ['React', 'styled-components', 'Swiper'],
     live: 'https://cat-cafe-zeta.vercel.app/',
+    logo: '/project-logos/catcafe.svg',
+    logoFont: 'var(--font-inter)',
     github: 'https://github.com/AnnetDev/Cat-Cafe',
   },
   {
@@ -52,7 +54,7 @@ export const projects: Project[] = [
     tech: ['React', 'CSS'],
     live: 'https://farm-food-market.vercel.app/',
     github: 'https://github.com/AnnetDev/FarmFoodMarket',
-    img: 'farmfood',
+    logo: '/project-logos/farmfood.svg',
   },
   {
     name: 'Internship',
@@ -60,7 +62,8 @@ export const projects: Project[] = [
     tech: ['HTML5', 'SCSS', 'JavaScript', 'Vite'],
     live: 'https://annetdev.github.io/Internship/',
     github: 'https://github.com/AnnetDev/Internship',
-    img: 'internship',
+    logo: '/project-logos/internship.svg',
+    logoFont: 'var(--font-manrope)',
   },
   {
     name: 'SuperGym',
@@ -68,7 +71,8 @@ export const projects: Project[] = [
     tech: ['HTML5', 'SCSS', 'JavaScript', 'Vite'],
     live: 'https://annetdev.github.io/SuperGym/',
     github: 'https://github.com/AnnetDev/SuperGym',
-    img: 'supergym',
+    logo: '/project-logos/supergym.svg',
+    logoFont: 'var(--font-alumni-sans)',
   },
   {
     name: 'Lifetour',
@@ -76,7 +80,8 @@ export const projects: Project[] = [
     tech: ['HTML5', 'SCSS', 'JavaScript'],
     live: 'https://annetdev.github.io/LIFETOUR/',
     github: 'https://github.com/AnnetDev/LIFETOUR',
-    img: 'lifetour',
+    logo: '/project-logos/lifetour.svg',
+    logoFont: 'var(--font-montserrat)',
   },
   {
     name: 'Drink2Go',
@@ -84,7 +89,8 @@ export const projects: Project[] = [
     tech: ['HTML5', 'SCSS', 'JavaScript', 'Gulp', 'noUiSlider'],
     live: 'https://annetdev.github.io/Drink2go-grading/',
     github: 'https://github.com/AnnetDev/Drink2go-grading',
-    img: 'drink2go',
+    logo: '/project-logos/drink2go.svg',
+    logoFont: 'var(--font-montserrat)',
   },
   {
     name: 'Kekstagram',
@@ -92,14 +98,15 @@ export const projects: Project[] = [
     tech: ['HTML5', 'CSS', 'JavaScript', 'AJAX'],
     live: 'https://annetdev.github.io/2448369-kekstagram-32/',
     github: 'https://github.com/AnnetDev/2448369-kekstagram-32',
-    img: 'kekstagram',
+    logo: '/project-logos/kekstagram.svg',
+    logoFont: 'var(--font-open-sans)',
   },
   {
     name: 'Osnova',
     description: 'Live production site for a massage & fitness studio. Semantic markup, complex layouts, interactive Yandex Maps, and adaptive graphics.',
     tech: ['HTML5', 'CSS', 'JavaScript'],
     live: 'https://osnovavrn.ru/',
-    img: 'osnova',
+    // logoFont: 'var(--font-montserrat)',
   },
   {
     name: 'Cat Energy',
@@ -107,6 +114,7 @@ export const projects: Project[] = [
     tech: ['HTML5', 'Sass', 'Gulp', 'BEM'],
     live: 'https://annetdev.github.io/2448369-cat-energy-31/',
     github: 'https://github.com/AnnetDev/2448369-cat-energy-31',
-    img: 'catenergy',
+    logo: '/project-logos/catenergy.svg',
+    logoFont: 'var(--font-oswald)',
   },
 ];

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { Inter, Nunito } from 'next/font/google';
-import { ThemeProvider } from '@/context/ThemeContext';
+import { Inter, Nunito, PT_Sans, Manrope, Alumni_Sans, Montserrat, Oswald, Open_Sans } from 'next/font/google';
+// import { ThemeProvider } from '@/context/ThemeContext';
 import '@/styles/style.scss';
 
 const inconsolata = localFont({
@@ -23,6 +23,43 @@ const nunito = Nunito({
   display: 'swap',
 });
 
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  display: 'swap',
+});
+
+const alumniSans = Alumni_Sans({
+  subsets: ['latin'],
+  variable: '--font-alumni-sans',
+  display: 'swap',
+});
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-manrope',
+  display: 'swap',
+});
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  variable: '--font-oswald',
+  display: 'swap',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-open-sans',
+  display: 'swap',
+});
+
+const ptSans = PT_Sans({
+  subsets: ['latin'],
+  variable: '--font-pt-sans',
+  weight: ['400', '700'],
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: 'Anna Baidikova',
   description: 'Anna Baidikova - Frontend & Web Developer — creating user-friendly and beautiful interfaces with a focus on responsiveness, speed, and accessibility',
@@ -34,15 +71,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${nunito.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${nunito.variable} ${ptSans.variable} ${manrope.variable} ${alumniSans.variable} ${montserrat.variable} ${oswald.variable} ${openSans.variable}`}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="preload" href="/fonts/Inconsolata.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className={inconsolata.className}>
-        <ThemeProvider>
+        {/* <ThemeProvider> */}
           {children}
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

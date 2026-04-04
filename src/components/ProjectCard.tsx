@@ -22,6 +22,13 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                 {project.name}
               </span>
             </div>
+          ) : project.logoFont ? (
+            <div className="projects__title-header">
+              <span className="projects__title-bar" />
+              <span className="projects__title-text" style={{ fontFamily: project.logoFont }}>
+                {project.name}
+              </span>
+            </div>
           ) : project.img ? (
             <Image
               src={`/images/projects/${project.img}-mobile@1x.jpg`}

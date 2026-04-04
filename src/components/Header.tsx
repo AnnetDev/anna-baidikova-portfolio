@@ -2,9 +2,9 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Sun, Moon } from 'lucide-react';
+// import { Sun, Moon } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import { useTheme } from '@/context/ThemeContext';
+// import { useTheme } from '@/context/ThemeContext';
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -16,7 +16,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const navRef = useRef<HTMLElement>(null);
-  const { isLight, toggleTheme } = useTheme();
+  // const { isLight, toggleTheme } = useTheme();
 
   useEffect(() => {
     const checkMobile = () => {
@@ -76,12 +76,12 @@ export default function Header() {
                 <a href={href}>{label}</a>
               </li>
             ))}
-            <li className="header__menu-item">
+            {/* <li className="header__menu-item">
               <button className="header__theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
                 <span className="visually-hidden">Toggle theme</span>
                 {isLight ? <Moon size={22} /> : <Sun size={22} />}
               </button>
-            </li>
+            </li> */}
           </menu>
         </nav>
         </div>
