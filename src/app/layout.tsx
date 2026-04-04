@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { Inter, Nunito } from 'next/font/google';
 import { ThemeProvider } from '@/context/ThemeContext';
 import '@/styles/style.scss';
 
@@ -7,6 +8,18 @@ const inconsolata = localFont({
   src: '../../public/fonts/Inconsolata.woff2',
   variable: '--font-inconsolata',
   weight: '200 900',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const nunito = Nunito({
+  subsets: ['latin'],
+  variable: '--font-nunito',
   display: 'swap',
 });
 
@@ -21,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${nunito.variable}`}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="preload" href="/fonts/Inconsolata.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />

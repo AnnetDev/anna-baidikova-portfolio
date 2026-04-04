@@ -1,6 +1,6 @@
 import { Mail } from 'lucide-react';
-import GitHubIcon from '@/icons/github.svg';
-import LinkedInIcon from '@/icons/linkedin.svg';
+import GitHubIcon from '@/icons/GitHubIcon';
+import LinkedInIcon from '@/icons/LinkedInIcon';
 
 export default function Footer() {
   return (

@@ -1,7 +1,7 @@
 import type { ComponentType, SVGProps } from 'react';
 import { Mail } from 'lucide-react';
-import GitHubIcon from '@/icons/github.svg';
-import LinkedInIcon from '@/icons/linkedin.svg';
+import GitHubIcon from '@/icons/GitHubIcon';
+import LinkedInIcon from '@/icons/LinkedInIcon';
 
 type IconProps = SVGProps<SVGSVGElement> & { size?: number };
 

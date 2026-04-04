@@ -9,7 +9,20 @@ export default function ProjectCard({ project, index }: { project: Project; inde
         {project.featured && <span className="projects__badge">Featured</span>}
 
         <div className="projects__card-image">
-          {project.img ? (
+          {project.logo ? (
+            <div className="projects__logo-header">
+              <Image
+                src={project.logo}
+                alt={`${project.name} logo`}
+                width={64}
+                height={64}
+                className="projects__logo"
+              />
+              <span className="projects__logo-name" style={{ fontFamily: project.logoFont }}>
+                {project.name}
+              </span>
+            </div>
+          ) : project.img ? (
             <Image
               src={`/images/projects/${project.img}-mobile@1x.jpg`}
               alt={`${project.name} project`}

@@ -23,6 +23,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (light) {
       document.documentElement.classList.add('light-mode');
     }
+    // enable transitions only after theme is applied to avoid flash on load
+    document.documentElement.classList.add('theme-ready');
     setMounted(true);
   }, []);
 
