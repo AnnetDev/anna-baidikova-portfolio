@@ -70,11 +70,20 @@ export const metadata: Metadata = {
     siteName: 'Anna Baidikova Portfolio',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://anna-baidikova-portfolio.vercel.app/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Anna Baidikova — Frontend & Fullstack Developer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Anna Baidikova — Frontend & Fullstack Developer',
     description: 'React, TypeScript, Node.js. Based in Stockholm.',
+    images: ['https://anna-baidikova-portfolio.vercel.app/opengraph-image'],
   },
 };
 
