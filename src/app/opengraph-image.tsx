@@ -1,13 +1,9 @@
 import { ImageResponse } from 'next/og';
-import { readFile } from 'node:fs/promises';
-import { join } from 'node:path';
 
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 export default async function Image() {
-  const font = await readFile(join(process.cwd(), 'public/fonts/Inconsolata.woff2'));
-
   return new ImageResponse(
     (
       <div
@@ -108,7 +104,6 @@ export default async function Image() {
     ),
     {
       ...size,
-      fonts: [{ name: 'Inconsolata', data: font, weight: 700 }],
     }
   );
 }
