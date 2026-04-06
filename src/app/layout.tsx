@@ -62,7 +62,20 @@ const ptSans = PT_Sans({
 
 export const metadata: Metadata = {
   title: 'Anna Baidikova',
-  description: 'Anna Baidikova - Frontend & Web Developer — creating user-friendly and beautiful interfaces with a focus on responsiveness, speed, and accessibility',
+  description: 'Frontend & Fullstack Developer based in Stockholm. React, TypeScript, Node.js — from pixel to API.',
+  openGraph: {
+    title: 'Anna Baidikova — Frontend & Fullstack Developer',
+    description: 'React, TypeScript, Node.js. Projects from landing pages to fullstack apps with REST API and auth. Based in Stockholm, open to opportunities in Scandinavia.',
+    url: 'https://anna-baidikova-portfolio.vercel.app',
+    siteName: 'Anna Baidikova Portfolio',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Anna Baidikova — Frontend & Fullstack Developer',
+    description: 'React, TypeScript, Node.js. Based in Stockholm.',
+  },
 };
 
 export default function RootLayout({
