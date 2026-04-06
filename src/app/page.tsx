@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import Contacts from '@/components/Contacts';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Contacts />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }
