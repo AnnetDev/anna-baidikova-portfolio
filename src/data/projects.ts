@@ -13,9 +13,10 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: 'Helo Hälsa',
-    description: 'Full redesign and rebuild of a corporate wellness company\'s public website during an internship — migrated from Squarespace to a custom React build. Led UX/UI design, an ~80-page SEO-optimised architecture, and the final client handover.',
+    description: 'Full redesign and rebuild of a company\'s public website during an internship — migrated from Squarespace to a custom React build. Led UX/UI design, an ~80-page SEO-optimised architecture, and the final client handover.',
     tech: ['React', 'Responsive Design', 'SEO', 'Schema.org', 'Open Graph', 'UX/UI Design'],
     live: 'https://helohalsa.com/',
+    logo: '/project-logos/helohalsa.svg',
     logoFont: 'var(--font-inconsolata)',
     featured: true,
   },
