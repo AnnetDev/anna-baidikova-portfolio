@@ -12,6 +12,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: 'Helo Hälsa',
+    description: 'Full redesign and rebuild of a corporate wellness company\'s public website during an internship — migrated from Squarespace to a custom React build. Led UX/UI design, an ~80-page SEO-optimised architecture, and the final client handover.',
+    tech: ['React', 'Responsive Design', 'SEO', 'Schema.org', 'Open Graph', 'UX/UI Design'],
+    live: 'https://helohalsa.com/',
+    logoFont: 'var(--font-inconsolata)',
+    featured: true,
+  },
+  {
     name: 'IntervalFlow',
     description: 'Fullstack HIIT/Tabata training app with an exercise library and configurable interval timer. Custom hooks architecture, REST API with JWT auth, rate limiting, and interactive OpenAPI docs.',
     tech: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Web Audio API'],
